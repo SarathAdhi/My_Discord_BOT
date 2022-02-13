@@ -25,25 +25,25 @@ client.on("messageCreate", msg => {
             msg.reply(help());
         }
         if(aboutMe.includes(str)){
-            msg.channel.send(aboutSA());
+            msg.reply(aboutSA());
         }
         if (str.includes("google")) {
-            msg.channel.send(googleLink(str));
+            msg.reply(googleLink(str));
         }
         if (Admin.includes(str)) {
-            msg.channel.send(sendAdmin());
+            msg.reply(sendAdmin());
         }
         if (Name.includes(str)) {
-            msg.channel.send("My name is Progret. You can call me Prog.");
+            msg.reply("My name is Progret. You can call me Prog.");
         }
         if (/joke/.test(str)) {
-            msg.channel.send(sendJoke());
+            msg.reply(sendJoke());
         }
         if (str.includes('calc')) {
-            msg.channel.send(calculator(str));
+            msg.reply(calculator(str));
         }
         if(str.includes('img')){
-            msg.channel.send(showImg(str));
+            msg.reply(showImg(str));
         }
     }
 })
