@@ -28,10 +28,24 @@
             "joke" : "Why did the bullet end up losing his job? He got fired."
         }
     ],
-    "Reply":[
-        {
-            "question": "how are you",
-            "answer": "I am fine. What about you?"
-        }
-    ]
+    "Reply":{
+        "FineMSG":[
+            {
+                "question": "how are you",
+                "answer": "I am fine. What about you?"
+            },
+            {
+                "question": "how r u",
+                "answer": "I am 5n, Wht abt u?"
+            },
+            {
+                "question": "how are you?",
+                "answer": "I am fine. What about you?"
+            },
+            {
+                "question": "how r u?",
+                "answer": "I am 5n, Wht abt u?"
+            }
+        ]
+    }
 }

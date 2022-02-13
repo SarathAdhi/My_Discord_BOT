@@ -46,7 +46,7 @@ client.on("messageCreate", msg => {
             msg.reply(showImg(str));
         }
     }
-    else if (msg.author.bot == false && str.includes(":")) {
+    else if (msg.author.bot == false && str.includes("prog")) {
         msg.reply(chatReply());
     }
 })
@@ -55,7 +55,8 @@ keepAlive()
 client.login(mySecret)
 
 function chatReply(){
-    return "Msg";
+    let len = Data.Reply.FineMSG.length
+    return len;
 }
 
 function help(){
