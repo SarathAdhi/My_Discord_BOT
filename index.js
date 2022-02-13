@@ -19,9 +19,7 @@ client.on("messageCreate", msg => {
 
     str = msg.content.toLowerCase();
 
-    if (msg.includes(":")) {
-        msg.reply(chatReply());
-    }
+    
 
     if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
 
@@ -49,6 +47,9 @@ client.on("messageCreate", msg => {
         if(str.includes('img')){
             msg.reply(showImg(str));
         }
+    }
+    else if (msg.includes(":")) {
+        msg.reply(chatReply());
     }
 })
 
