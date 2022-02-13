@@ -44,7 +44,7 @@ client.on("messageCreate", msg => {
             msg.reply(showImg(str));
         }
     }
-    else if (str.includes(".prog")) {
+    if (str.includes(".prog")) {
         msg.reply(chatReply());
     }
 })
