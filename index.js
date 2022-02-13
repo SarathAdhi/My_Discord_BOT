@@ -9,7 +9,6 @@ var x=0;
 
 let Admin = ["$your admin", "$admin", "$your owner"];
 let Name = ["$bot name", "$your name", "$name"];
-let Joke = ["joke", "jokes"];
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -33,7 +32,7 @@ client.on("messageCreate", msg => {
         if (Name.includes(str)) {
             msg.channel.send("My name is Progret. You can call me Prog.");
         }
-        if (Joke.includes(str)) {
+        if (/joke/.test(str)) {
             msg.channel.send(sendJoke());
         }
         if (str.includes('calc')) {
