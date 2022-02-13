@@ -16,13 +16,12 @@ client.on("ready", () => {
 client.on("messageCreate", msg => {
 
     str = msg.content.toLowerCase();
-
-    if (msg.author.bot == false && /prog/.test(str)){
-        msg.reply(chatReply());
-    }
     
-    else if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
+    if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
         
+        if (/!prog/.test(str)) {
+            msg.reply(chatReply());
+        }
         if (str.includes("help")) {
             msg.reply(help());
         }
