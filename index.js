@@ -7,7 +7,7 @@ const mySecret = process.env.TOKEN;
 
 var x=0;
 
-let Admin = ["$your admin", "$admin", "$your owner"];
+let Admin = ["$your admin", "$admin", "$your owner", "$founder", "$your founder"];
 let Name = ["$bot name", "$your name", "$name"];
 
 client.on("ready", () => {
