@@ -26,7 +26,7 @@ client.on("messageCreate", msg => {
             msg.channel.send(googleLink(str));
         }
         if (Admin.includes(str)) {
-            msg.channel.send({files: ["https://i.imgur.com/XxxXxXX.jpg"]});
+            msg.channel.send(sendAdmin());
         }
         if (Name.includes(str)) {
             msg.channel.send("My name is Progret. You can call me Prog.");
@@ -37,7 +37,9 @@ client.on("messageCreate", msg => {
         if (str.includes('calc')) {
             msg.channel.send(calculator(str));
         }
-
+        if(str.includes('img')){
+            msg.channel.send(showImg(str));
+        }
     }
 })
 
@@ -71,3 +73,7 @@ function calculator(str) {
     return "Answer = " + answer;
 }
 
+function showImg(str) {
+    let values = str.split(" ")
+    return {files: [values[1]]};
+}
