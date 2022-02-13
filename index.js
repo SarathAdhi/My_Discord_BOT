@@ -5,9 +5,13 @@ const Data = require('./Data.json')
 
 const mySecret = process.env.TOKEN;
 
+let createdDate = "12-02-2022";
 let Admin = ["!your admin", "!admin", "!your owner", "!founder", "!your founder"];
 let Name = ["!bot name", "!your name", "!name"];
 let aboutMe = ["!about sa", "!your boss details", "!about your boss", "!about sarath adhithya", "!sarath adhithya", "!sa", "!sarath", "!about your founder", "!about sarath"];
+let about = "Hello, I am Sarath Adhithya, I am a Under Graduate student at Vellore Institute of Technology, Chennai. I am pursuing CS specialization in Artificial Intelligence and Robotics.\n"+
+    "\nShorts about me:\nPet lover\nFriends forever\nCricket"+"\n\nSocial media handles:\nLinkedin: https://www.linkedin.com/in/sarath-adhithya-145427225/"+
+    "\nInstagram: https://www.instagram.com/sarath_adhithya/\nGithub: https://github.com/SarathAdhi\nTwitter: https://twitter.com/AdhithyaSarath\nMy portfolio: https://sarathadhi.netlify.app";
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -19,8 +23,8 @@ client.on("messageCreate", msg => {
     
     if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
         
-        if (/!-/.test(str)) {           //for chatting
-            msg.reply(chatReply(str));
+        if (/!-how/.test(str) || /!- how/.test(str)) {           //for chatting
+            msg.reply(howRU(str));
         }
         if (str.includes("help")) {
             msg.reply(help());
@@ -53,7 +57,7 @@ client.on("messageCreate", msg => {
 keepAlive()
 client.login(mySecret)
 
-function chatReply(str){
+function howRU(str){
     let splitMSG = str.split("-");
     let reply = splitMSG[1];
 
@@ -73,9 +77,6 @@ function help(){
 }
 
 function aboutSA(){
-    let about = "Hello, I am Sarath Adhithya, I am a Under Graduate student at Vellore Institute of Technology, Chennai. I am pursuing CS specialization in Artificial Intelligence and Robotics.\n"+
-    "\nShorts about me:\nPet lover\nFriends forever\nCricket"+"\n\nSocial media handles:\nLinkedin: https://www.linkedin.com/in/sarath-adhithya-145427225/"+
-    "\nInstagram: https://www.instagram.com/sarath_adhithya/\nGithub: https://github.com/SarathAdhi\nTwitter: https://twitter.com/AdhithyaSarath\nMy portfolio: https://sarathadhi.netlify.app";
     return about;
 }
 
