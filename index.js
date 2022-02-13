@@ -20,7 +20,7 @@ client.on("messageCreate", msg => {
     if (msg.author.bot == false && str.includes("$")){   //reply only if the user and not the bot itself
 
         if (str.includes("help")) {
-            msg.channel.send("help()");
+            msg.channel.send(help());
         }
         if (str.includes("google")) {
             msg.channel.send(googleLink(str));
