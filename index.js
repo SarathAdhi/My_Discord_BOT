@@ -5,8 +5,6 @@ const Data = require('./Data.json')
 
 const mySecret = process.env.TOKEN;
 
-var x=0;
-
 let Admin = ["!your admin", "!admin", "!your owner", "!founder", "!your founder"];
 let Name = ["!bot name", "!your name", "!name"];
 let aboutMe = ["!about sa", "!your boss details", "!about your boss", "!about sarath adhithya", "!sarath adhithya", "!sa", "!sarath", "!about your founder", "!about sarath"];
@@ -19,7 +17,10 @@ client.on("messageCreate", msg => {
 
     str = msg.content.toLowerCase();
 
-    if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
+    if (msg.author.bot == false && str.includes("prog")) {
+        msg.reply(chatReply());
+    }
+    else if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
 
         if (str.includes("help")) {
             msg.reply(help());
@@ -45,9 +46,6 @@ client.on("messageCreate", msg => {
         if(str.includes('img')){
             msg.reply(showImg(str));
         }
-    }
-    else if (msg.author.bot == false && str.includes("prog")) {
-        msg.reply(chatReply());
     }
 })
 
