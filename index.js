@@ -9,6 +9,7 @@ var x=0;
 
 let Admin = ["$your admin", "$admin", "$your owner", "$founder", "$your founder"];
 let Name = ["$bot name", "$your name", "$name"];
+let aboutMe = ["$about SA", "$your boss details", "$about your boss", "$about sarath", "$about sarath adhithya", "$sarath", "sarath", "$about your founder", "$about sarath"];
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -22,6 +23,9 @@ client.on("messageCreate", msg => {
 
         if (str.includes("help")) {
             msg.channel.send(help());
+        }
+        if(aboutMe.includes(str)){
+            msg.channel.send(aboutSA());
         }
         if (str.includes("google")) {
             msg.channel.send(googleLink(str));
@@ -48,9 +52,16 @@ keepAlive()
 client.login(mySecret)
 
 function help(){
-    let helpStr = "Here is what I can doo\n\nNOTE: Include Dollor symbol before every keyword\n\n1. Calculation - $calc 1+2\n2. Google - $google (your search)\n3. Jokes - $joke"+
-    "\n4. To show images - $img (image URL)"
+    let helpStr = "Here is what I can doo\n\nNOTE: Include Dollor symbol before every keyword\n\nAbout my founder - $about SA\nCalculation - $calc 1+2\nGoogle - $google (your search)\nJokes - $joke"+
+    "\nTo show images - $img (image URL)"
     return helpStr;
+}
+
+function aboutSA(){
+    let about = "Hello, I am Sarath Adhithya, I am a Under Graduate student at Vellore Institute of Technology, Chennai. I am pursuing CS specialization in Artificial Intelligence and Robotics.\n"+
+    "Shorts about me:\nWeb Developer❤️\nJavascript❤️\nReacjJS❤️"+"Social media handles:\nLinkedin: https://www.linkedin.com/in/sarath-adhithya-145427225/"+
+    "\nInstagram: https://www.instagram.com/sarath_adhithya/\nGithub: https://github.com/SarathAdhi\nMy portfolio: https://sarathadhi.netlify.app";
+    return about;
 }
 
 function googleLink(str){
