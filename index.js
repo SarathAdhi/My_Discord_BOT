@@ -48,7 +48,7 @@ client.on("messageCreate", msg => {
             msg.reply(showImg(str));
         }
     }
-    else if (msg.includes(":")) {
+    else if (str.includes(":")) {
         msg.reply(chatReply());
     }
 })
