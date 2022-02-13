@@ -26,7 +26,7 @@ client.on("messageCreate", msg => {
             msg.channel.send(googleLink(str));
         }
         if (Admin.includes(str)) {
-            msg.channel.send(sendAdmin());
+            msg.channel.send({files: ["https://i.imgur.com/XxxXxXX.jpg"]});
         }
         if (Name.includes(str)) {
             msg.channel.send("My name is Progret. You can call me Prog.");
