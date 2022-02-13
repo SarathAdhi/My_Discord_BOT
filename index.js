@@ -18,7 +18,10 @@ client.on("messageCreate", msg => {
     str = msg.content.toLowerCase();
 
     if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
-
+        
+        if (str.includes("prog")) {
+            msg.reply(chatReply());
+        }
         if (str.includes("help")) {
             msg.reply(help());
         }
@@ -44,9 +47,7 @@ client.on("messageCreate", msg => {
             msg.reply(showImg(str));
         }
     }
-    if (str.includes(".prog")) {
-        msg.reply(chatReply());
-    }
+    
 })
 
 keepAlive()
