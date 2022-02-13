@@ -55,7 +55,7 @@ client.login(mySecret)
 
 function chatReply(){
     let len = Data.Reply.FineMSG.length
-    return len;
+    return "len";
 }
 
 function help(){
