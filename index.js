@@ -19,7 +19,7 @@ client.on("messageCreate", msg => {
     
     if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
         
-        if (/!-/.test(str)) {
+        if (/!-/.test(str)) {           //for chatting
             msg.reply(chatReply());
         }
         if (str.includes("help")) {
