@@ -47,7 +47,8 @@ keepAlive()
 client.login(mySecret)
 
 function help(){
-    let helpStr = "Here is what I can doo\n\nNOTE: Include Dollor symbol before every keyword\n\n1. Calculation - $calc 1+2\n2. Google - $google (your search)\n3. Jokes - $joke"
+    let helpStr = "Here is what I can doo\n\nNOTE: Include Dollor symbol before every keyword\n\n1. Calculation - $calc 1+2\n2. Google - $google (your search)\n3. Jokes - $joke"+
+    "\n4. To show images - $img (image URL)"
     return helpStr;
 }
 
