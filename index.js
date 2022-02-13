@@ -20,7 +20,7 @@ client.on("messageCreate", msg => {
     if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
         
         if (/!-/.test(str)) {           //for chatting
-            msg.reply(chatReply());
+            msg.reply(chatReply(str));
         }
         if (str.includes("help")) {
             msg.reply(help());
@@ -53,9 +53,17 @@ client.on("messageCreate", msg => {
 keepAlive()
 client.login(mySecret)
 
-function chatReply(){
-    let len = Data.Reply.FineMSG.length
-    return "len";
+function chatReply(str){
+    let splitMSG = str.split("-");
+    let reply = splitMSG[1];
+
+    let len = Data.Reply.FineMSG.length;
+
+    for(var i=0; i<len; i++){
+        if(reply.includes(Data.Reply.FineMSG[i].question))
+            return Data.Reply.FineMSG[i].answer;
+    }
+    
 }
 
 function help(){
