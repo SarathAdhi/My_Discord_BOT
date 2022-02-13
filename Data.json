@@ -27,5 +27,11 @@
         {
             "joke" : "Why did the bullet end up losing his job? He got fired."
         }
+    ],
+    "Reply":[
+        {
+            "question": "how are you",
+            "answer": "I am fine. What about you?"
+        }
     ]
 }

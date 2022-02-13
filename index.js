@@ -7,9 +7,9 @@ const mySecret = process.env.TOKEN;
 
 var x=0;
 
-let Admin = ["$your admin", "$admin", "$your owner", "$founder", "$your founder"];
-let Name = ["$bot name", "$your name", "$name"];
-let aboutMe = ["$about sa", "$your boss details", "$about your boss", "$about sarath adhithya", "$sarath adhithya", "$sa", "$sarath", "$about your founder", "$about sarath"];
+let Admin = ["!your admin", "!admin", "!your owner", "!founder", "!your founder"];
+let Name = ["!bot name", "!your name", "!name"];
+let aboutMe = ["!about sa", "!your boss details", "!about your boss", "!about sarath adhithya", "!sarath adhithya", "!sa", "!sarath", "!about your founder", "!about sarath"];
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -19,7 +19,11 @@ client.on("messageCreate", msg => {
 
     str = msg.content.toLowerCase();
 
-    if (msg.author.bot == false && str.includes("$")){   //reply only if the user and not the bot itself
+    if (msg.includes("!")) {
+        msg.reply(chatReply());
+    }
+
+    if (msg.author.bot == false && str.includes("!")){   //reply only if the user and not the bot itself
 
         if (str.includes("help")) {
             msg.reply(help());
@@ -52,8 +56,8 @@ keepAlive()
 client.login(mySecret)
 
 function help(){
-    let helpStr = "Here is what I can doo\n\nNOTE: Include Dollor symbol before every keyword\n\nAbout my founder - $about SA\nCalculation - $calc 1+2\nGoogle - $google (your search)\nJokes - $joke"+
-    "\nTo show images - $img (image URL)"
+    let helpStr = "Here is what I can doo\n\nNOTE: Include ! symbol before every keyword\n\nAbout my founder - !about SA\nCalculation - !calc 1+2\nGoogle - !google (your search)\nJokes - !joke"+
+    "\nTo show images - !img (image URL)"
     return helpStr;
 }
 
