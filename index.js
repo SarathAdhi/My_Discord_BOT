@@ -1,10 +1,8 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const keepAlive = require("./server")
-const Data = require('./Data.json')
-const config = require('./config.json')
 
-const mySecret = config.token;
+const mySecret = process.env.TOKEN;
 
 var x=0;
 
