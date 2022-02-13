@@ -61,7 +61,7 @@ function googleLink(str){
 }
 
 function sendAdmin() {
-    return "My Admin is Sarath Adhithya ❤️";
+    return "At first I was an idea, Then my founder Sarath Adhithya created me ❤️";
 }
 
 function sendJoke() {
