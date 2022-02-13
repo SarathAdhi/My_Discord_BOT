@@ -9,7 +9,7 @@ var x=0;
 
 let Admin = ["$your admin", "$admin", "$your owner", "$founder", "$your founder"];
 let Name = ["$bot name", "$your name", "$name"];
-let aboutMe = ["$about sa", "$your boss details", "$about your boss", "$about sarath adhithya", "$sarath adhithya", "$sa", "$sarath", "$about your founder", "$about sarath"];
+let aboutMe = ["$about sa", "your admin", "your founder", "$your boss", "$your boss details", "$about your boss", "$about sarath adhithya", "$sarath adhithya", "$sa", "$sarath", "$about your founder", "$about sarath"];
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
