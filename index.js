@@ -54,6 +54,10 @@ client.on("messageCreate", msg => {
 keepAlive()
 client.login(mySecret)
 
+function chatReply(){
+    return "Msg";
+}
+
 function help(){
     let helpStr = "Here is what I can doo\n\nNOTE: Include ! symbol before every keyword\n\nAbout my founder - !about SA\nCalculation - !calc 1+2\nGoogle - !google (your search)\nJokes - !joke"+
     "\nTo show images - !img (image URL)"
